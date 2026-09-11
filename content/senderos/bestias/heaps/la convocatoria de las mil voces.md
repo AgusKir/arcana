@@ -3,6 +3,7 @@ title: La Convocatoria de las Mil Voces
 tags:
   - heaps
   - desafio
+  - resuelto
 ---
 
 **Dificultad:** ★★★☆☆
