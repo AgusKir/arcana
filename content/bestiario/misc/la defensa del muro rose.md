@@ -67,6 +67,8 @@ Cañones seleccionados: C1, C2 y C4
 Número mínimo: 3 cañones activados
 ```
 
+![Cobertura del muro con C1, C2 y C4](la-defensa-del-muro-rose-ejemplo.svg)
+
 ---
 
 ## Por dónde empezar
