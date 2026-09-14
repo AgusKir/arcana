@@ -2,6 +2,7 @@
 title: La defensa del Muro Rose
 tags:
   - bestia
+  - misc
 ---
 
 ## Nombre y enunciado
@@ -79,4 +80,4 @@ La tarea consiste en diseñar un algoritmo de defensa **ávido** que determine q
 
 ## Soluciones disponibles
 
-- [[la defensa del muro rose-greedy]]
+- [[la-defensa-del-muro-rose-greedy]]
