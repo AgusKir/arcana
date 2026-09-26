@@ -12,9 +12,9 @@ alias:
 ### Intuición
 El **Árbol AVL** es un [[binary search tree|Árbol de Búsqueda Binaria]] (BST) que se balancea automáticamente al insertar o eliminar nodos. Así la altura se mantiene acotada, y la búsqueda, la inserción y la eliminación se resuelven de manera eficiente.
 
-![Las claves 1 a 5 insertadas en orden en un BST común y en un AVL](/attachments/grimorio/data-structures/avl-vs-bst.svg)
+![Las claves 10 a 50 insertadas en orden en un BST común y en un AVL|674](/attachments/grimorio/data-structures/avl-vs-bst.svg)
 
-*Figura 1. Las claves 1 a 5 en orden: el BST degenera en una cadena de altura 5; el AVL rota y queda en altura 3.*
+*Figura 1. Poniendo las claves 10 a 50 en orden, el BST degenera en una cadena de altura 4; el AVL rota y queda en altura 2.*
 
 ### Definición / propiedades
 
@@ -70,9 +70,9 @@ Cuando una operación deja un nodo en $FB = \pm 2$, se realizan rotaciones para 
 - **LR** (el nodo a la izquierda, el hijo a la derecha): rotación izquierda sobre el hijo y después derecha sobre el nodo.
 - **RL**: (el nodo a la derecha, el hijo a la izquierda): rotación derecha sobre el hijo y después izquierda sobre el nodo.
 
-![Rotación derecha sobre un nodo desbalanceado (caso LL)](/attachments/grimorio/data-structures/avl-rotacion.svg)
+![Rotación derecha sobre un nodo desbalanceado (caso LL)|665](/attachments/grimorio/data-structures/avl-rotacion.svg)
 
-*Figura 3. Caso LL: el 50 queda en $FB = +2$ y su hijo 30 en $+1$; la rotación derecha sube el 30 y baja el 50, que recibe el subárbol del 40.*
+*Figura 3. Caso LL: la Z queda en $FB = +2$ y su hijo Y en $+1$; la rotación derecha sube el Y y baja la Z, que recibe el subárbol del T3.*
 
 ### Algoritmos
 
@@ -175,8 +175,11 @@ avl = ArbolAVL()
 raiz = None
 valores = [10, 20, 30, 40, 50, 25]
 
+def compEnteros(a, b):
+	return a - b;
+
 for v in valores:
-    raiz = avl.insertar(raiz, v)
+    raiz = avl.insertar(raiz, v, compEnteros)
 
 print("Recorrido Preorden del árbol balanceado:")
 avl.preorden(raiz)
@@ -187,9 +190,9 @@ avl.preorden(raiz)
 30 (h=3) 20 (h=2) 10 (h=1) 25 (h=1) 40 (h=2) 50 (h=1)
 ```
 
-![Traza del ejemplo: las seis claves insertadas en orden en un AVL](/attachments/grimorio/data-structures/avl-traza.svg)
+![Las seis claves insertadas en orden en un AVL|667](/attachments/grimorio/data-structures/avl-traza.svg)
 
-*Figura 4. La traza del ejemplo: el 30 y el 50 dejan un nodo en $FB = -2$ con su hijo del mismo lado (caso RR, una rotación), y el 25 lo deja en zigzag (caso RL, dos). El árbol final es el que imprime el preorden de arriba.*
+*Figura 4. El árbol final es el que imprime el preorden de arriba con su estado tras las rotaciones.*
 
 ## 4. Uso y criterio
 
